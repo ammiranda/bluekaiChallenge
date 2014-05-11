@@ -1,4 +1,4 @@
-module.exports = function textJustifier(str) {
-	return str;
+module.exports = function textJustifier(string, width) {
+	
 };
 
