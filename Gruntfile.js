@@ -21,5 +21,5 @@ grunt.initConfig({
 grunt.loadNpmTasks('grunt-simple-mocha');
 grunt.loadNpmTasks('grunt-contrib-jshint');
 
-grunt.registerTask('test', ['simplemocha', 'jshint']);
+grunt.registerTask('test', ['jshint', 'simplemocha']);
 };
