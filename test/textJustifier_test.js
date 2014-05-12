@@ -15,5 +15,8 @@ describe('textJustifier_test', function() {
 		it('function should create a newline when string length exceeds the width length at a non-whitespace character', function(){
 			textJustifier("Bob loves food alot.", 14).should.equal("Bob loves food\nalot.");
 		});
+		it('function should create a newline for multiple lines when applicable', function() {
+			textJustifier("Bobby Hill plays ball at the spa", 10).should.equal("Bobby Hill\nplays ball\nat the spa");
+		});
 	});
 });
