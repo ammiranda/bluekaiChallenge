@@ -7,7 +7,9 @@ String.prototype.replaceAt = function(index, ch) {
 };
 
 /* String Splitter iterates through the passed in string and replaces white space characters that 
-occur at the width with newline characters and then returns the string at the conclusion of the loop.*/
+occur at the width with newline characters and then returns the string at the conclusion of the loop.
+There is no current handling for when the string has non-whitespace characters at the indices that
+are multiples of the width parameter.*/
 
 function stringSplitter(string, width){
 	for(var i = width - 1; string[i] !== undefined; i = i + width + 1) {
