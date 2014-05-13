@@ -6,31 +6,31 @@ String.prototype.replaceAt = function(index, ch) {
 	return this.substr(0, index) + ch + this.substr(index + ch.length);
 };
 
-function substringModifier(index, substr, width){
-
-}
-
-/*if ((i + 1) % width === 0) {
-	var last = whitespaces.pop();
-}*/
+/* String Splitter iterates through the passed in string and replaces white space characters that 
+occur at the width with newline characters and then returns the string at the conclusion of the loop.*/
 
 function stringSplitter(string, width){
 	for(var i = width - 1; string[i] !== undefined; i = i + width + 1) {
 		if (string[i + 1] === " " && (i + 1) < string.length){
 			string = string.replaceAt((i + 1), '\n');
 		}
-		else {
-			string = string.replaceAt((i + 1), '\n');
-		}
 	}
 	return string;
 }
 
-module.exports = function textJustifier(string, width) {
+/* Text Justifier is a function that is exported as a module in order to be tested using Mocha and
+Chai.  It handles the base case for when the whole string is shorter than the desired width and 
+simply returns the string as a result. Otherwise it returns what String Splitter returns given
+the passed in arguments */
+
+function textJustifier(string, width) {
+	var ans = "";
 	if (string.length <= width) {
 		return string;
 	}
 	return stringSplitter(string, width);
-};
+}
+
+module.exports = textJustifier;
 
 
