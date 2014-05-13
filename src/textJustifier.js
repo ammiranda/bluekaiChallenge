@@ -6,9 +6,13 @@ String.prototype.replaceAt = function(index, ch) {
 	return this.substr(0, index) + ch + this.substr(index + ch.length);
 };
 
-function substringModifier(substr, width){
+function substringModifier(index, substr, width){
 
 }
+
+/*if ((i + 1) % width === 0) {
+	var last = whitespaces.pop();
+}*/
 
 function stringSplitter(string, width){
 	for(var i = width - 1; string[i] !== undefined; i = i + width + 1) {
@@ -16,7 +20,7 @@ function stringSplitter(string, width){
 			string = string.replaceAt((i + 1), '\n');
 		}
 		else {
-			substringModifier();
+			string = string.replaceAt((i + 1), '\n');
 		}
 	}
 	return string;
