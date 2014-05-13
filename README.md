@@ -1,4 +1,17 @@
 Text Justifier Challenge Solution
 ===
 
-I wrote a method in this repository that right and left justifies a string that is passed into the method formatting the body of text to conform to a specified margin length.
+###Overview
+
+My implementation of a text justification algorithm in JavaScript.
+
+###Instructions
+
+1. Clone down this repository
+2. Run 'npm install' when in the root of the repo's directory
+3. Run 'grunt test' to see the method's output when passed in sample inputs
+4. Rejoice
+
+###Questions/Comments
+
+Any questions or comments feel free to [email me](mailto:alexandermichaelmiranda@gmail.com)
